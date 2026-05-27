@@ -11,7 +11,8 @@
 }
 
 html {
-	font-size: 10px;
+	font-size: 10px; /* Facilita el uso de rem para tamaños de fuente */
+    scroll-behavior: smooth; /* Suaviza el desplazamiento al hacer clic en enlaces internos */
 }
 
 /* =========================
@@ -43,11 +44,6 @@ a:hover {
 ul {
     list-style: none;
 }
-
-/* =========================
-   GRID
-========================= */
-
 
 /* =========================
    HEADER
@@ -120,14 +116,14 @@ ul {
 ========================= */
 
 #intro {
-    width: 100%; /* Todo el ancho */
-    min-height: 100vh; /* Altura completa de pantalla */
+    position: relative; /* Para posicionar elementos internos */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
 
     background-image: url("../img/intro.jpg"); /* Imagen de fondo */
     background-size: cover; /* Cubre todo el contenedor */
     background-position: center bottom; /* Centra la imagen */
     background-repeat: no-repeat; /* No repita la imagen */
-    background-attachment: fixed; /* Fija la imagen al hacer scroll */
+    background-attachment: fixed; /* Efecto parallax */
 
     display: flex; /* Flexbox */
     justify-content: center; /* Centra horizontalmente */
@@ -366,3 +362,222 @@ h1 {
     color: #00bcd4; /* Color celeste */
     padding-left: 12px; /* Espacio para el efecto de desplazamiento */
 }
+
+
+/* =========================
+   Acerca de mí
+========================= */
+
+#acerca-de {
+    padding: 85px 20%;
+    background: #ffffff;
+    color: black;
+}
+
+.seccion-intro {
+    position: relative;
+    text-align: center;
+    bottom: 20px;   
+}
+
+.separador {
+    display: flex;
+
+    justify-content: center;
+    
+    gap: 50px;
+    padding-bottom: 30px;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.seccion-intro img {
+    width: 100px;
+    height: 100px;
+
+    left: 50%;
+    transform: translateX(-70%);
+    
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid #00bcd4;
+
+    box-shadow: 0 0 25px rgba(0,188,212,0.5);
+}
+.descripcion {
+    max-width: 600px;
+
+    text-align: left;
+    font-size: 2rem;
+    
+    left: 50%;
+    transform: translateX(-8%);
+
+    color: #000000;
+
+    line-height: 1.8;
+}
+
+.seccion-intro h5 {
+    color: #00bcd4;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.seccion-intro h1 {
+    font-size: 4.1rem;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* CONTENIDO */
+
+.acerca-de-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.acerca-de-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 420px;
+    font-size: 1.9rem;
+}
+
+.acerca-de-box h3 {
+    margin-bottom: 25px;
+    color: #00bcd4;
+}
+
+/* INFO */
+
+.info-lista li {
+    margin-bottom: 15px;
+}
+
+.info-lista strong {
+    color: black;
+}
+
+/* SKILLS */
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.skill-info p {
+    margin: 0;
+    font-weight: 520;
+    color: #000;
+}
+
+.skill-info span {
+    font-weight: 520;
+    color: #000;
+}
+
+.barra {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progreso {
+    height: 100%;
+    background: #00bcd4;
+    border-radius: 20px;
+}
+
+/* PORCENTAJES */
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 84%;
+}
+
+.python {
+    width: 80%;
+}
+
+.git {
+    width: 68%;
+}
+
+.base-de-datos {
+    width: 77%;
+}
+
+/* =========================
+   BOTONES acerca de mí
+========================= */
+
+.button-section {
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
+.col-twelve {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border: 2px solid #00bcd4;
+
+    color: #00bcd4;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+/* Botón transparente */
+.stroke {
+    background: transparent;
+}
+
+/* Botón principal */
+.button-primary {
+    background: #00bcd4;
+    color: #fff;
+}
+
+/* Hover */
+.button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 20px rgba(0,188,212,0.4);
+}
+
+.stroke:hover {
+    background: #00bcd4;
+    color: #fff;
+}
+
+.button-primary:hover {
+    background: transparent;
+    color: #00bcd4;
+}
+

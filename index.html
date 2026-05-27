@@ -35,7 +35,10 @@
 			<nav class="navegacion"> <!-- Navegación -->
 				<ul class="navegacion-principal"> <!-- Lista de enlaces de navegación -->
 					<li><a href="#intro">Inicio</a></li>
-					<li><a href="#about">Acerca de</a></li>
+					<li>
+						<a href="#acerca-de">
+							Acerca de</a>
+					</li>
 					<li><a href="#resume">Resumen</a></li>
 					<li><a href="#portfolio">Portafolio</a></li>
 					<li><a href="#services">Servicios</a></li>
@@ -65,7 +68,7 @@
 	   				<span>UI/UX Designer</span> 
 	   			</p>
 
-	   			<a class="Desplazamiento" href="#">
+	   			<a class="Desplazamiento" href="#acerca-de"> <!-- Enlace para desplazarse a la sección "Acerca de" -->
 					Más sobre mi<i class="fa-solid fa-angle-down"></i>
 				</a>
 
@@ -74,15 +77,141 @@
    	</div> <!-- /intro-content(introduccion de contenido) --> 
 
    	<ul class="intro-social">        
-         <li><a href="#"><i class="fa-brands fa-facebook"></i></i></a></li>
-         <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+         <li><a href="https://www.facebook.com/jonii.sombras"><i class="fa-brands fa-facebook"></i></a></li>
+         <li><a href="https://wa.me/5492613014524" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
          <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
-         <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-      </ul> <!-- /intro-social(intro de redes sociales) -->      	
-
+         <li><a href="https://github.com/agusn16"><i class="fa-brands fa-github"></i></a></li>
+         <li><a href="https://www.instagram.com/agusnb16"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul> <!-- /intro-social(intro de redes sociales) -->
 </section> <!-- /intro(introducción) -->
 
-<script src="js/main.js"></script> <!-- Enlace al archivo JavaScript para la funcionalidad del menú hamburguesa -->
+<section id="acerca-de"> <!-- Sección de acerca de -->
+
+    <div class="seccion-intro">
+
+        <h5>Sobre mí</h5>
+        <h1>Déjame presentarme.</h1>
+
+        <div class="separador">
+			<img src="img\perfil.png" alt="Foto de perfil">
+			<p class="descripcion">
+            Lorem ipsum Exercitation culpa qui dolor consequat exercitation 
+			fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure 
+			sunt id pariatur Duis laboris amet exercitation veniam labore consectetur ea id quis eiusmod.
+        	</p>
+		</div>
+
+    </div>
+
+    <div class="acerca-de-content">
+
+        <!-- PERFIL -->
+        <article class="acerca-de-box">
+
+            <h3>Perfil</h3>
+
+            <ul class="info-lista">
+                <li><strong>Nombre:</strong>
+					<p>Agustin Nicolas Benitez</p>
+				</li>
+				<li><strong>Cumpleaños:</strong>
+					<p>Octubre 1,2002</p>
+				</li>
+                <li><strong>Especialidad:</strong>
+					<p>Frontend Developer</p>
+				</li>
+                <li><strong>GitHub:</strong>
+					<p>github.com/agusn16</p>
+				</li>
+                <li><strong>Email:</strong>
+					<p>agusbenitez157@gmail.com</p>
+				</li>
+            </ul>
+
+        </article>
+
+        <!-- SKILLS -->
+        <article class="acerca-de-box">
+
+            <h3>Habilidades</h3>
+
+            <div class="skill">
+
+    			<div class="skill-info">
+        			<p>HTML</p>
+        			<span>90%</span>
+    			</div>
+
+    			<div class="barra">
+        			<div class="progreso html"></div>
+    			</div>
+
+			</div>
+
+			<div class="skill">
+
+    			<div class="skill-info">
+        			<p>CSS</p>
+        			<span>80%</span>
+    			</div>
+
+   				<div class="barra">
+        			<div class="progreso css"></div>
+    			</div>
+
+			</div>
+
+			<div class="skill">
+
+    			<div class="skill-info">
+        			<p>Base de Datos</p>
+        			<span>70%</span>
+    			</div>
+
+    			<div class="barra">
+        			<div class="progreso base-de-datos"></div>
+    			</div>
+
+			</div>
+
+			<div class="skill">
+
+    			<div class="skill-info">
+        			<p>Python</p>
+        			<span>75%</span>
+    			</div>
+
+    			<div class="barra">
+        			<div class="progreso python"></div>
+    			</div>
+			</div>
+
+        </article>
+
+    </div>
+	
+	<div class="row button-section">
+   		
+		<div class="col-twelve">
+   			
+			<a href="#" title="Hire Me" class="button stroke smoothscroll">
+				Hire Me
+			</a>
+   		
+			<a href="#" title="Download CV" class="button button-primary">
+				Descargar CV
+			</a>
+   		
+		</div>   		
+   	
+	</div>
+</section>
+
+
+<section id="portfolio"></section>
+<section id="services"></section>
+<section id="contact"></section>
+
+<script src="js/main.js"></script>  <!-- Enlace al archivo JavaScript para la funcionalidad del menú hamburguesa -->
 </body>
 </html>
