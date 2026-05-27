@@ -1,0 +1,368 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+
+/* Elimina márgenes y espacios por defecto
+   de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+/* =========================
+    Body
+========================= */
+
+body {
+    font-family: "lora-regular", Arial, sans-serif, serif; /* Fuente elegante y legible */
+    background: #151515; /* Fondo oscuro para un diseño moderno */
+    font-size: 1.7rem; /* Tamaño de fuente legible */
+    line-height: 1.5; /* Espacio entre líneas para mejorar legibilidad */
+    color: #6e6e6e; /* Color de texto gris claro para buen contraste */
+}
+
+/* =========================
+   ENLACES Y LISTAS
+========================= */
+
+
+a {
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #00bcd4;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   GRID
+========================= */
+
+
+/* =========================
+   HEADER
+========================= */
+
+.encabezado {
+    width: 100%; /* Ocupa todo el ancho */
+    position: absolute; /* Para posicionar elementos internos */
+}
+
+.top-barra {
+    position: absolute; /* Posición absoluta para superponer */
+    top: 0; /* Fija en la parte superior */
+    left: 28%; /* Centra horizontalmente */
+
+    transform: translateX(-50%); /* Ajusta para centrar exactamente */
+
+    width: 250px; /* Ancho completo */
+    height: 70px; /* Altura de la barra */
+
+    background-color: #000; /* Negro intenso */
+    
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre elementos */
+    
+    padding: 0 30px; /* Espaciado arriba y abajo */
+    
+    z-index: 1000; /* Encima de otros elementos */
+}
+
+.logo-link {
+    font-size: 3.0rem; /* Tamaño del texto */
+    font-weight: 700; /* Texto en negrita */
+    color: white; /* Color blanco */
+    letter-spacing: 0.2rem; /* Espaciado entre letras */
+}
+
+/* =========================
+   menu hamburguesa
+========================= */
+
+.menu-hamburguesa {
+    display: flex; /* Oculto por defecto */
+    flex-direction: column; /* Apila las líneas */
+    justify-content: center; /* Centra las líneas */
+    gap: .5rem; /* Espacio entre líneas */
+
+    width: 3rem; /* Ancho del botón */
+    height: 3rem; /* Altura del botón */
+
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
+}
+
+.menu-hamburguesa div {
+    width: 100%; /* Ancho completo del botón */
+    height: 2px; /* Grosor de las líneas */
+
+    background: #00bcd4; /* Color celeste */
+
+    border-radius: 5px; /* Bordes redondeados */
+    
+    transition: 0.3s; /* Transición suave */
+}
+
+/* =========================
+   INTRO
+========================= */
+
+#intro {
+    width: 100%; /* Todo el ancho */
+    min-height: 100vh; /* Altura completa de pantalla */
+
+    background-image: url("../img/intro.jpg"); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center bottom; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repita la imagen */
+    background-attachment: fixed; /* Fija la imagen al hacer scroll */
+
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+
+    text-align: center; /* Centra texto */
+    color: white; /* Color del texto */
+    position: relative; /* Permite overlay */
+}
+
+/* Contenido interno del intro */
+
+/* Capa oscura transparente */
+.introduccion {
+    position: absolute; /* Posición libre */
+    inset: 0; /* Ocupa todo el contenedor */
+    background: rgba(20, 20, 20, 0.75); /* Negro transparente */
+}
+
+/* Texto pequeño de bienvenida */
+
+.caja-intro-principal {
+    position: relative; /* Permite overlay */
+    transform: translateY(-25%); /* Mueve el elemento hacia arriba */
+    z-index: 2; /* Encima del overlay */
+}
+
+
+/* Texto pequeño de bienvenida */
+h5 {
+    font-size: 2.2rem; /* Tamaño del texto */
+    color: #00bcd4; /* Celeste */
+    margin-bottom: 0.3rem; /* Espacio inferior */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 0.15rem; /* Espaciado entre letras */
+}
+
+/* Nombre principal */
+h1 {
+    font-size: 9rem; /* Tamaño del texto */
+    font-weight: 700; /* Texto en negrita */
+    text-shadow: 0 0 30px rgba(0, 188, 212, 0.55); /* Sombra celeste */
+    margin-bottom: 1rem; /* Espacio inferior */
+    line-height: 1.1; /* Espacio entre líneas */
+}
+
+/* Contenedor de profesiones */
+.posicion {
+    margin-bottom: 2.5rem; /* Espacio inferior */
+}
+
+.posicion span {
+    display: inline-block; /* Permite margen */
+    margin: 0 1px; /* Espacio entre elementos */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 18px; /* Tamaño de fuente */
+    letter-spacing: 0.6rem; /* Espaciado entre letras */
+}
+
+.posicion span::after {
+    content: ""; /* Agrega una barra vertical después del texto */
+    color: rgba(255,255,255,0.3);
+}
+
+.posicion span::before {
+    content: "| "; /* Agrega una barra vertical antes del texto */
+    margin-left: 1.5rem; /* Espacio entre la barra y el texto */
+    color: rgba(255,255,255,0.3); /* Color de la barra (opcional) */
+}
+
+.posicion span:last-child::after {
+    content: " |"; /* Agrega una barra vertical después del último texto */
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+/* Botón "Más sobre mí" */
+.Desplazamiento {
+    display: inline-block; /* Para que el padding funcione */
+    padding: 1.4rem 3rem; /* Espacio interno */
+
+    letter-spacing: 0.2rem; /* Espaciado entre letras */
+
+    border: 2px solid rgba(255,255,255,0.4); /* Borde blanco */
+    color: white; /* Texto blanco */
+    
+    transition: all 0.3s ease; /* Transición suave */
+
+    backdrop-filter: blur(1px); /* Efecto de desenfoque */
+}
+
+.Desplazamiento i {
+    margin-left: 8px; /* Espacio entre texto e ícono */
+    font-size: 1.2rem; /* Tamaño del ícono */
+}
+
+/* Efecto hover del botón */
+.Desplazamiento:hover {
+    border: 2px solid #00bcd4; /* Fondo celeste */
+    color: white; /* Texto blanco */
+
+    transform: translateY(-3px); /* Eleva el botón */
+
+    box-shadow: 0 0 20px rgba(0,188,212,0.5); /* Sombra celeste */
+}
+
+/* =========================
+   REDES SOCIALES
+========================= */
+
+/* Contenedor de redes sociales */
+.intro-social {
+    position: absolute; /* Posición absoluta para superponer */
+    bottom: 4rem; /* Separación inferior */
+    
+    width: 100%; /* Ocupa todo el ancho */
+    
+    display: flex; /* Flexbox para alinear iconos */
+    justify-content: center; /* Centrado */
+    
+    gap: 5rem; /* Espacio entre iconos */
+    
+    z-index: 2; /* Encima del overlay */
+}
+/* Iconos sociales */
+.intro-social a {
+    font-size: 3rem; /* Tamaño de los iconos */
+    color: white;
+}
+
+/* Hover de iconos */
+.intro-social a:hover {
+    color: #00bcd4; 
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Ajustes para tablets y celulares */
+@media screen and (max-width: 768px) { /* Ajustes para tablets y celulares */
+
+    /* Elementos del header en columna */
+    .top-barra {
+        padding: 15px 30px; /* Reduce el padding para más espacio */
+    }
+
+    /* Reduce tamaño del título */
+    h1 {
+        font-size: 4.5rem; /* Tamaño del texto */
+    }
+
+    /* Las profesiones se apilan */
+    .posicion span {
+        display: block; /* Cada profesión en una línea separada */
+        margin: 1rem 0; /* Espacio entre elementos */
+    }
+}
+
+@media screen and (max-width: 600px) { /* Ajustes para celulares pequeños */
+
+    /* Reduce aún más el título */
+    h1 {
+        font-size: 3rem; /* Tamaño del texto */
+    }
+
+    /* Reduce tamaño del texto pequeño */
+    h5 {
+        font-size: 1.8rem; /* Tamaño del texto */
+    }
+}
+
+.menu-hamburguesa.activo div:first-child { /* Primer div (línea superior) */
+    transform: rotate(45deg) translate(5px, 5px); /* Rota y desplaza para formar la "X" */
+}
+
+.menu-hamburguesa.activo div:nth-child(2) { /* Segundo div (línea del medio) */
+    opacity: 0; /* Oculta la línea del medio */
+}
+
+.menu-hamburguesa.activo div:last-child { /* Tercer div (línea inferior) */
+    transform: rotate(-45deg) translate(6px, -5px); /* Rota y desplaza para formar la "X" */
+}
+/* =========================
+   MENÚ DESPLEGABLE
+========================= */
+.navegacion {
+    position: absolute; /* Posición absoluta para superponer */
+
+    top: 70px; /* justo debajo de la barra */
+    left: 0; /* Alineado a la izquierda */
+
+    width: 250px; /* Ancho del menú */
+
+    background: #000;
+
+    padding: 30px; /* Espacio interno */
+
+    opacity: 0; /* Oculta el menú por defecto */
+    visibility: hidden; /* Oculta el menú por defecto */
+
+    transform: translateY(-40px); /* Mueve el menú hacia arriba para el efecto de aparición */
+
+    transition: all 0.3s linear; /* Transición suave */
+
+    z-index: 999; /* Encima de otros elementos */
+} 
+/* Mostrar menú al pasar el mouse */
+.navegacion.activo { /* Clase activa para mostrar el menú */
+    opacity: 1; /* Hace el menú visible */
+    visibility: visible; /* Permite interactuar con el menú */
+    transform: translateY(0); /* Mueve el menú hacia abajo para el efecto de aparición */
+}
+/* Lista del menú */
+.navegacion-principal { /* Lista del menú */
+    list-style: none; /* Elimina viñetas */
+    border: transparent; /* Sin borde */
+
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    
+    gap: 30px; /* Espacio entre elementos */
+
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+/* Links */
+.navegacion-principal li a { /* Estilos para los enlaces del menú */
+    border: transparent; /* Fondo transparente */
+    color: white; /* Color blanco */
+
+}
+/* Hover */
+.navegacion-principal li a:hover { /* Efecto hover para los enlaces del menú */
+    color: #00bcd4; /* Color celeste */
+    padding-left: 12px; /* Espacio para el efecto de desplazamiento */
+}
