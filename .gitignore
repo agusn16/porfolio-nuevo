@@ -1,5 +1,6 @@
 # Dependencias (si algún día usas Node)
 node_modules/
+.extras/
 
 # Archivos del sistema
 .DS_Store
