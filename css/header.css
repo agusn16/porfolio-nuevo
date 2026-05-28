@@ -1,0 +1,141 @@
+/* =========================
+   HEADER
+========================= */
+
+.encabezado {
+    width: 100%; /* Ocupa todo el ancho */
+    position: absolute; /* Para posicionar elementos internos */
+}
+
+.top-barra {
+    overflow: visible; /* Oculta cualquier contenido que se desborde de la barra */
+    position: fixed; /* Posición absoluta para superponer */
+    
+    top: 0; /* Fija en la parte superior */
+    left: 28%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar exactamente */
+
+    width: 250px; /* Ancho completo */
+    height: 70px; /* Altura de la barra */
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.4); /* Sombra para dar profundidad */
+    background-color: #000; /* Negro intenso */
+    
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre elementos */
+    
+    padding: 0 30px; /* Espaciado arriba y abajo */
+    
+    z-index: 1000; /* Encima de otros elementos */
+}
+
+.logo-link {
+    font-size: 3.0rem; /* Tamaño del texto */
+    font-weight: 700; /* Texto en negrita */
+    color: white; /* Color blanco */
+    letter-spacing: 0.2rem; /* Espaciado entre letras */
+}
+
+/* =========================
+   menu hamburguesa
+========================= */
+
+.menu-hamburguesa {
+    display: flex; /* Oculto por defecto */
+    flex-direction: column; /* Apila las líneas */
+    justify-content: center; /* Centra las líneas */
+    gap: .5rem; /* Espacio entre líneas */
+
+    width: 3rem; /* Ancho del botón */
+    height: 3rem; /* Altura del botón */
+
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano */
+}
+
+.menu-hamburguesa div {
+    width: 100%; /* Ancho completo del botón */
+    height: 2px; /* Grosor de las líneas */
+
+    background: #00bcd4; /* Color celeste */
+
+    border-radius: 5px; /* Bordes redondeados */
+    
+    transition: 0.3s; /* Transición suave */
+}
+
+.menu-hamburguesa.activo div:first-child { /* Primer div (línea superior) */
+    transform: rotate(45deg) translate(5px, 5px); /* Rota y desplaza para formar la "X" */
+}
+
+.menu-hamburguesa.activo div:nth-child(2) { /* Segundo div (línea del medio) */
+    opacity: 0; /* Oculta la línea del medio */
+}
+
+.menu-hamburguesa.activo div:last-child { /* Tercer div (línea inferior) */
+    transform: rotate(-45deg) translate(6px, -5px); /* Rota y desplaza para formar la "X" */
+}
+
+/* =========================
+   MENÚ DESPLEGABLE DE HAMBURGUESA
+========================= */
+
+.navegacion {
+    position: absolute; /* Posición absoluta para superponer */
+
+    top: 70px; /* justo debajo de la barra */
+    left: 0; /* Alineado a la izquierda */
+
+    width: 100%; /* Ancho del menú */
+    background: #000000; /* Fondo negro para el menú */
+
+    padding: 25px 30px; /* Espacio interno */
+
+    opacity: 0; /* Oculta el menú por defecto */
+    visibility: hidden; /* Oculta el menú por defecto */
+
+    transform: translateY(-40px); /* Mueve el menú hacia arriba para el efecto de aparición */
+
+    transition: all 0.3s linear; /* Transición suave */
+
+    z-index: 999; /* Encima de otros elementos */
+} 
+
+
+.navegacion.activo { /* Clase activa para mostrar el menú */
+    opacity: 1; /* Hace el menú visible */
+    visibility: visible; /* Permite interactuar con el menú */
+    transform: translateY(0); /* Mueve el menú hacia abajo para el efecto de aparición */
+}
+
+/* Lista del menú */
+.navegacion-principal { /* Lista del menú */
+    list-style: none; /* Elimina viñetas */
+    border: transparent; /* Sin borde */
+
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    
+    gap: 30px; /* Espacio entre elementos */
+
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Links */
+.navegacion-principal li a { /* Estilos para los enlaces del menú */
+    border: transparent; /* Fondo transparente */
+    color: white; /* Color blanco */
+
+}
+/* Hover */
+.navegacion-principal li a:hover { /* Efecto hover para los enlaces del menú */
+    color: #00bcd4; /* Color celeste */
+    padding-left: 12px; /* Espacio para el efecto de desplazamiento */
+}
+
+.navegacion-principal li a.activo-link {
+    color: #00bcd4; /* Color celeste para el enlace activo */
+}

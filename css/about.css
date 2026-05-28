@@ -1,0 +1,213 @@
+/* =========================
+   Acerca de mí
+========================= */
+
+#acerca-de {
+    padding: 85px 20%; /* Ajusta el padding para que sea proporcional al tamaño de la pantalla */
+    background: #ffffff; /* Fondo blanco */
+    color: black; /*color del texto */
+}
+
+.seccion-intro {
+    position: relative; /* Para posicionar el texto sobre la imagen */
+    text-align: center; /* Centrar el texto */
+    bottom: 20px; /* Ajusta este valor para mover el texto hacia abajo */
+}
+
+.separador {
+    display: flex; /* Para alinear horizontalmente */
+
+    justify-content: center; /* Centrar horizontalmente */
+    
+    gap: 50px; /* Espacio entre la imagen y el texto */
+    padding-bottom: 30px; /* Espacio debajo del separador */
+
+    max-width: 900px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+.seccion-intro img {
+    width: 100px; /* Tamaño fijo para la imagen */
+    height: 100px; /* Tamaño fijo para la imagen */
+    
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se recorte para llenar el círculo */
+
+    border: 4px solid #00bcd4; /* Borde azul alrededor de la imagen */
+
+    box-shadow: 0 0 25px rgba(0,188,212,0.5); /* Sombra azul alrededor de la imagen */
+}
+.descripcion {
+    max-width: 600px; /* Ancho máximo para el texto */
+
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 2rem; /* Tamaño de fuente más grande para mejor legibilidad */
+
+    color: #000000; /* Color del texto */
+
+    line-height: 1.8; /* Espaciado entre líneas para mejorar la legibilidad */
+}
+
+.seccion-intro h5 {
+    color: #00bcd4; /* Color azul para el subtítulo */
+    font-size: 1.5rem; /* Tamaño de fuente para el subtítulo */
+    text-transform: uppercase; /* Transformar el texto a mayúsculas */
+}
+
+.seccion-intro h1 {
+    font-size: 4.1rem; /* Tamaño de fuente para el título principal */
+    margin-top: 10px; /* Espacio superior para el título principal */
+    padding-bottom: 20px; /* Espacio inferior para el título principal */
+}
+
+/* CONTENIDO */
+
+.acerca-de-content {
+    display: flex; /* Para alinear horizontalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas más pequeñas */
+    gap: 50px; /* Espacio entre los elementos */
+}
+
+.acerca-de-box {
+    flex: 1; /* Permite que las cajas se expandan para llenar el espacio disponible */
+    min-width: 300px; /* Ancho mínimo para cada caja */
+    max-width: 420px; /* Ancho máximo para cada caja */
+    background: #f5f5f5; /* Fondo gris claro para las cajas */
+    padding: 30px; /* Espacio interno para las cajas */
+    font-size: 1.9rem; /* Tamaño de fuente para el contenido */
+}
+
+.acerca-de-box h3 {
+    margin-bottom: 25px; /* Espacio debajo del título de cada caja */
+    color: #00bcd4; /* Color azul para los títulos de cada caja */
+}
+
+/* INFO */
+
+.info-lista li {
+    margin-bottom: 15px; /* Espacio entre los elementos de la lista */
+    color: #000; /* Color del texto de la lista */
+}
+
+.info-lista strong {
+    color: black; /* Color del texto en negrita */
+}
+
+/* SKILLS */
+
+.skill-info {
+    display: flex; /* Para alinear horizontalmente */
+    justify-content: space-between; /* Espacio entre el texto y la barra de progreso */
+    align-items: center; /* Alinear verticalmente el texto con la barra de progreso */
+
+    margin-top: 40px; /* Espacio superior para separar cada skill */
+}
+
+.skill-info p {
+    margin: 0; /* Eliminar el margen predeterminado */
+    font-weight: 520; /* Peso de la fuente */
+    color: #000; /* Color del texto */
+}
+
+.skill-info span {
+    font-weight: 520; /* Peso de la fuente */
+    color: #000; /* Color del texto */
+}
+
+.barra {
+    width: 100%; /* Ancho completo para la barra de progreso */
+    height: 10px; /* Altura de la barra de progreso */
+    background: #222; /* Fondo oscuro para la barra de progreso */
+    border-radius: 20px; /* Bordes redondeados para la barra de progreso */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde de la barra de progreso */
+}
+
+.progreso {
+    height: 100%; /* Altura completa para la barra de progreso */
+    background: #00bcd4; /* Fondo azul para la barra de progreso */
+    border-radius: 20px; /* Bordes redondeados para la barra de progreso */
+}
+
+/* PORCENTAJES */
+
+.html {
+    width: 90%; /* Ancho de la barra de progreso para HTML */
+}
+
+.css {
+    width: 84%; /* Ancho de la barra de progreso para CSS */
+}
+
+.python {
+    width: 80%; /* Ancho de la barra de progreso para Python */
+}
+
+.git {
+    width: 68%; /* Ancho de la barra de progreso para Git */
+}
+
+.base-de-datos {
+    width: 77%; /* Ancho de la barra de progreso para Base de Datos */
+}
+
+/* =========================
+   BOTONES acerca de mí
+========================= */
+
+.button-section {
+    margin-top: 40px; /* Espacio superior para separar la sección de botones del contenido anterior */
+    text-align: center; /* Centrar los botones horizontalmente */
+    
+}
+
+.col-twelve {
+    display: flex; /* Para alinear horizontalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 25px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en pantallas más pequeñas */
+}
+
+.button {
+    display: inline-block; /* Para que el botón se comporte como un elemento en línea pero permita padding y otros estilos de bloque */
+
+    padding: 15px 35px; /* Espacio interno para el botón (ajustable según tus necesidades) */
+
+    border: 2px solid #00bcd4; /* Borde azul para el botón */
+
+    color: #00bcd4; /* Color del texto para el botón */
+
+    font-size: 1.5rem; /* Tamaño de fuente para el botón */
+    font-weight: 600; /* Peso de la fuente */
+    letter-spacing: 0.1rem; /* Espaciado entre letras para mejorar la legibilidad */
+    text-transform: uppercase; /* Transformar el texto a mayúsculas */
+
+    transition: 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.stroke { /* Estilos para el botón stroke */
+    background: transparent; /* Fondo transparente para el botón stroke */
+}
+
+
+.button-primary { /* Estilos para el botón principal */
+    background: #00bcd4; /* Fondo azul para el botón principal */
+    color: #fff; /* Color del texto blanco para el botón principal */
+}
+
+
+.button:hover { /* Estilos para el efecto hover en ambos botones */
+    transform: translateY(-3px); /* Efecto de elevación al hacer hover */
+
+    box-shadow: 0 0 20px rgba(0,188,212,0.4); /* Sombra azul para el efecto hover */
+}
+
+.stroke:hover { /* Estilos para el efecto hover en el botón stroke */
+    background: #00bcd4; /* Fondo azul para el botón stroke al hacer hover */
+    color: #fff; /* Color del texto blanco para el botón stroke al hacer hover */
+}
+
+.button-primary:hover { /* Estilos para el efecto hover en el botón principal */
+    background: transparent; /* Fondo transparente para el botón principal al hacer hover */
+    color: #00bcd4; /* Color del texto azul para el botón principal al hacer hover */
+}

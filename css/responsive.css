@@ -1,0 +1,79 @@
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media screen and (max-width: 600px) { /* Ajustes para celulares pequeños */
+
+    /* Reduce aún más el título */
+    h1 {
+        font-size: 3rem; /* Tamaño del texto */
+    }
+
+    /* Reduce tamaño del texto pequeño */
+    h5 {
+        font-size: 1.8rem; /* Tamaño del texto */
+    }
+
+    .top-barra {
+        width: 220px; /* Ancho del menú para pantallas pequeñas */
+        height: 65px; /* Altura del menú para pantallas pequeñas */
+    }
+
+    .navegacion {
+        top: 65px; /* Ajusta la posición del menú para que esté justo debajo de la barra */
+    }
+
+    .logo-link {
+        font-size: 2.5rem; /* Reduce el tamaño del texto del logo */
+    }
+}
+
+@media screen and (max-width: 768px) { /* Ajustes para tablets y celulares en la sección "Acerca de mí" */
+
+    /* Reduce tamaño del título */
+    h1 {
+        font-size: 4.5rem; /* Tamaño del texto */
+    }
+
+    /* Las profesiones se apilan */
+    .posicion span {
+        display: block; /* Cada profesión en una línea separada */
+        margin: 1rem 0; /* Espacio entre elementos */
+    }
+
+    .separador { /* Oculta el separador en pantallas pequeñas */
+        flex-direction: column; /* Cambia a columna para apilar los elementos */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Centra el texto */
+    }
+
+    .descripcion { /* Ajusta la descripción para pantallas pequeñas */
+        text-align: center; /* Centra el texto en la descripción */
+        margin-bottom: 20px; /* Agrega espacio inferior para separar del contenido */
+    }
+
+    .acerca-de-content {
+        flex-direction: column; /* Cambia a columna para apilar las cajas */
+        align-items: center;    /* Centra las cajas horizontalmente */
+        align-content: center; /* Centra el contenido dentro de las cajas */
+        gap: 30px; /* Reduce el espacio entre las cajas */
+    }
+
+    .top-barra {
+        left: 50%; /* Centra la barra horizontalmente */
+        transform: translateX(-50%); /* Centra la barra horizontalmente */
+        width: auto; /* Permite que la barra se ajuste al contenido */
+        padding: 15px 30px; /* Reduce el padding para más espacio */
+    }
+
+    .posicion span::after { /* Agrega un separador visual entre las profesiones */
+        content: ""; /* Agrega un separador visual entre las profesiones */
+        color: #6e6e6e; /* Color del separador */
+    }
+
+    .posicion span:not(:last-child)::after { /* Agrega un separador visual entre las profesiones excepto el último */
+        content: " |"; /* Agrega un separador visual entre las profesiones excepto el último */
+        color: #6e6e6e; /* Color del separador */
+    }
+}

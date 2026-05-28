@@ -1,13 +1,10 @@
 /* =========================
    RESET BÁSICO
 ========================= */
-
-/* Elimina márgenes y espacios por defecto
-   de todos los elementos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
 }
 
 html {
@@ -18,7 +15,6 @@ html {
 /* =========================
     Body
 ========================= */
-
 body {
     font-family: "lora-regular", Arial, sans-serif, serif; /* Fuente elegante y legible */
     background: #151515; /* Fondo oscuro para un diseño moderno */
@@ -31,84 +27,17 @@ body {
    ENLACES Y LISTAS
 ========================= */
 
-
 a {
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: 0.3s ease-in-out; /* Transición suave para efectos hover */
 }
 
 a:hover {
-    color: #00bcd4;
+    color: #00bcd4; /* Cambia el color al pasar el mouse para indicar interactividad */
 }
 
 ul {
-    list-style: none;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.encabezado {
-    width: 100%; /* Ocupa todo el ancho */
-    position: absolute; /* Para posicionar elementos internos */
-}
-
-.top-barra {
-    position: absolute; /* Posición absoluta para superponer */
-    top: 0; /* Fija en la parte superior */
-    left: 28%; /* Centra horizontalmente */
-
-    transform: translateX(-50%); /* Ajusta para centrar exactamente */
-
-    width: 250px; /* Ancho completo */
-    height: 70px; /* Altura de la barra */
-
-    background-color: #000; /* Negro intenso */
-    
-    display: flex; /* Flexbox para alinear elementos */
-    align-items: center; /* Centra verticalmente */
-    gap: 20px; /* Espacio entre elementos */
-    
-    padding: 0 30px; /* Espaciado arriba y abajo */
-    
-    z-index: 1000; /* Encima de otros elementos */
-}
-
-.logo-link {
-    font-size: 3.0rem; /* Tamaño del texto */
-    font-weight: 700; /* Texto en negrita */
-    color: white; /* Color blanco */
-    letter-spacing: 0.2rem; /* Espaciado entre letras */
-}
-
-/* =========================
-   menu hamburguesa
-========================= */
-
-.menu-hamburguesa {
-    display: flex; /* Oculto por defecto */
-    flex-direction: column; /* Apila las líneas */
-    justify-content: center; /* Centra las líneas */
-    gap: .5rem; /* Espacio entre líneas */
-
-    width: 3rem; /* Ancho del botón */
-    height: 3rem; /* Altura del botón */
-
-    background: transparent; /* Fondo transparente */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cursor de mano */
-}
-
-.menu-hamburguesa div {
-    width: 100%; /* Ancho completo del botón */
-    height: 2px; /* Grosor de las líneas */
-
-    background: #00bcd4; /* Color celeste */
-
-    border-radius: 5px; /* Bordes redondeados */
-    
-    transition: 0.3s; /* Transición suave */
+    list-style: none; /* Elimina las viñetas de las listas */
 }
 
 /* =========================
@@ -131,7 +60,6 @@ ul {
 
     text-align: center; /* Centra texto */
     color: white; /* Color del texto */
-    position: relative; /* Permite overlay */
 }
 
 /* Contenido interno del intro */
@@ -259,325 +187,5 @@ h1 {
 /* Hover de iconos */
 .intro-social a:hover {
     color: #00bcd4; 
-}
-/* =========================
-   RESPONSIVE
-========================= */
-
-/* Ajustes para tablets y celulares */
-@media screen and (max-width: 768px) { /* Ajustes para tablets y celulares */
-
-    /* Elementos del header en columna */
-    .top-barra {
-        padding: 15px 30px; /* Reduce el padding para más espacio */
-    }
-
-    /* Reduce tamaño del título */
-    h1 {
-        font-size: 4.5rem; /* Tamaño del texto */
-    }
-
-    /* Las profesiones se apilan */
-    .posicion span {
-        display: block; /* Cada profesión en una línea separada */
-        margin: 1rem 0; /* Espacio entre elementos */
-    }
-}
-
-@media screen and (max-width: 600px) { /* Ajustes para celulares pequeños */
-
-    /* Reduce aún más el título */
-    h1 {
-        font-size: 3rem; /* Tamaño del texto */
-    }
-
-    /* Reduce tamaño del texto pequeño */
-    h5 {
-        font-size: 1.8rem; /* Tamaño del texto */
-    }
-}
-
-.menu-hamburguesa.activo div:first-child { /* Primer div (línea superior) */
-    transform: rotate(45deg) translate(5px, 5px); /* Rota y desplaza para formar la "X" */
-}
-
-.menu-hamburguesa.activo div:nth-child(2) { /* Segundo div (línea del medio) */
-    opacity: 0; /* Oculta la línea del medio */
-}
-
-.menu-hamburguesa.activo div:last-child { /* Tercer div (línea inferior) */
-    transform: rotate(-45deg) translate(6px, -5px); /* Rota y desplaza para formar la "X" */
-}
-/* =========================
-   MENÚ DESPLEGABLE
-========================= */
-.navegacion {
-    position: absolute; /* Posición absoluta para superponer */
-
-    top: 70px; /* justo debajo de la barra */
-    left: 0; /* Alineado a la izquierda */
-
-    width: 250px; /* Ancho del menú */
-
-    background: #000;
-
-    padding: 30px; /* Espacio interno */
-
-    opacity: 0; /* Oculta el menú por defecto */
-    visibility: hidden; /* Oculta el menú por defecto */
-
-    transform: translateY(-40px); /* Mueve el menú hacia arriba para el efecto de aparición */
-
-    transition: all 0.3s linear; /* Transición suave */
-
-    z-index: 999; /* Encima de otros elementos */
-} 
-/* Mostrar menú al pasar el mouse */
-.navegacion.activo { /* Clase activa para mostrar el menú */
-    opacity: 1; /* Hace el menú visible */
-    visibility: visible; /* Permite interactuar con el menú */
-    transform: translateY(0); /* Mueve el menú hacia abajo para el efecto de aparición */
-}
-/* Lista del menú */
-.navegacion-principal { /* Lista del menú */
-    list-style: none; /* Elimina viñetas */
-    border: transparent; /* Sin borde */
-
-    display: flex; /* Flexbox para alinear elementos */
-    flex-direction: column; /* Apila los elementos verticalmente */
-    
-    gap: 30px; /* Espacio entre elementos */
-
-    padding: 0; /* Elimina el padding por defecto */
-    margin: 0; /* Elimina el margen por defecto */
-}
-/* Links */
-.navegacion-principal li a { /* Estilos para los enlaces del menú */
-    border: transparent; /* Fondo transparente */
-    color: white; /* Color blanco */
-
-}
-/* Hover */
-.navegacion-principal li a:hover { /* Efecto hover para los enlaces del menú */
-    color: #00bcd4; /* Color celeste */
-    padding-left: 12px; /* Espacio para el efecto de desplazamiento */
-}
-
-
-/* =========================
-   Acerca de mí
-========================= */
-
-#acerca-de {
-    padding: 85px 20%;
-    background: #ffffff;
-    color: black;
-}
-
-.seccion-intro {
-    position: relative;
-    text-align: center;
-    bottom: 20px;   
-}
-
-.separador {
-    display: flex;
-
-    justify-content: center;
-    
-    gap: 50px;
-    padding-bottom: 30px;
-
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.seccion-intro img {
-    width: 100px;
-    height: 100px;
-
-    left: 50%;
-    transform: translateX(-70%);
-    
-    border-radius: 50%;
-    object-fit: cover;
-
-    border: 4px solid #00bcd4;
-
-    box-shadow: 0 0 25px rgba(0,188,212,0.5);
-}
-.descripcion {
-    max-width: 600px;
-
-    text-align: left;
-    font-size: 2rem;
-    
-    left: 50%;
-    transform: translateX(-8%);
-
-    color: #000000;
-
-    line-height: 1.8;
-}
-
-.seccion-intro h5 {
-    color: #00bcd4;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
-
-.seccion-intro h1 {
-    font-size: 4.1rem;
-    margin-top: 10px;
-    padding-bottom: 20px;
-}
-
-/* CONTENIDO */
-
-.acerca-de-content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.acerca-de-box {
-    flex: 1;
-    min-width: 300px;
-    max-width: 420px;
-    font-size: 1.9rem;
-}
-
-.acerca-de-box h3 {
-    margin-bottom: 25px;
-    color: #00bcd4;
-}
-
-/* INFO */
-
-.info-lista li {
-    margin-bottom: 15px;
-}
-
-.info-lista strong {
-    color: black;
-}
-
-/* SKILLS */
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-top: 40px;
-}
-
-.skill-info p {
-    margin: 0;
-    font-weight: 520;
-    color: #000;
-}
-
-.skill-info span {
-    font-weight: 520;
-    color: #000;
-}
-
-.barra {
-    width: 100%;
-    height: 10px;
-    background: #222;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.progreso {
-    height: 100%;
-    background: #00bcd4;
-    border-radius: 20px;
-}
-
-/* PORCENTAJES */
-
-.html {
-    width: 90%;
-}
-
-.css {
-    width: 84%;
-}
-
-.python {
-    width: 80%;
-}
-
-.git {
-    width: 68%;
-}
-
-.base-de-datos {
-    width: 77%;
-}
-
-/* =========================
-   BOTONES acerca de mí
-========================= */
-
-.button-section {
-    margin-top: 40px;
-    text-align: center;
-    
-}
-
-.col-twelve {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.button {
-    display: inline-block;
-
-    padding: 15px 35px;
-
-    border: 2px solid #00bcd4;
-
-    color: #00bcd4;
-
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-
-    transition: 0.3s ease;
-}
-
-/* Botón transparente */
-.stroke {
-    background: transparent;
-}
-
-/* Botón principal */
-.button-primary {
-    background: #00bcd4;
-    color: #fff;
-}
-
-/* Hover */
-.button:hover {
-    transform: translateY(-3px);
-
-    box-shadow: 0 0 20px rgba(0,188,212,0.4);
-}
-
-.stroke:hover {
-    background: #00bcd4;
-    color: #fff;
-}
-
-.button-primary:hover {
-    background: transparent;
-    color: #00bcd4;
 }
 
