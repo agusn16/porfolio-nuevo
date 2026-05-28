@@ -41,6 +41,108 @@ ul {
 }
 
 /* =========================
+   PRERECARGA
+========================= */
+
+#prerecarga { /* Contenedor del prerecarga */
+    position: fixed; /* Fija el prerecarga en la pantalla */
+    inset: 0; /* Ocupa toda la pantalla */
+
+    background: #0d0d0d; /* Fondo oscuro para el prerecarga */
+
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+
+    z-index: 99999; /* Asegura que el prerecarga esté por encima de todo */
+
+    overflow: hidden; /* Evita que el contenido se desborde */
+
+    transition: /* Transición suave para ocultar el prerecarga */
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+/* =========================
+   Línea superior animada
+========================= */
+
+.linea-top {
+    position: absolute; /* Posición absoluta para superponer en la parte superior */
+
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+
+    width: 0%; /* Comienza con ancho 0 para la animación */
+    height: 4px; /* Altura de la línea */
+
+    background: #00bcd4; /* Color de la línea */
+
+    animation: cargaLinea 1s ease forwards; /* Aplica la animación de carga */
+}
+
+/* Animación de carga */
+@keyframes cargaLinea {
+
+    0% {
+        width: 0%; /* Comienza con ancho 0 */
+    }
+
+    100% {
+        width: 100%; /* Termina con ancho completo */
+    }
+}
+
+/* =========================
+   recarga circular
+========================= */
+
+.recarga-circular {
+    width: 60px; /* Ancho del círculo */
+    height: 60px; /* Alto del círculo */
+
+    border: 10px solid rgba(255,255,255,0.08); /* Borde gris claro para el fondo del círculo */
+    border-top: 10px solid #00bcd4; /* Borde superior celeste para la animación de giro */
+
+    border-radius: 50%; /* Hace que el elemento sea circular */
+
+    animation: /* Aplica ambas animaciones: giro y desaparición */
+        girar 1s linear infinite,
+        desaparecer .3s ease forwards;
+
+    animation-delay: /* El giro comienza inmediatamente, la desaparición comienza después de */
+        0s,
+        0.8s;
+}
+
+/* Giro */
+@keyframes girar {
+
+    100% {
+        transform: rotate(360deg); /* Gira completamente */
+    }
+}
+
+/* Desaparece antes */
+@keyframes desaparecer {
+
+    to {
+        opacity: 0; /* Desvanece el círculo */
+        transform: scale(.7); /* Reduce el tamaño para un efecto de desaparición más dinámico */
+    }
+}
+
+/* =========================
+   Ocultar recarga
+========================= */
+
+#prerecarga.ocultar {
+    opacity: 0; /* Hace que el prerecarga sea transparente */
+    visibility: hidden; /* Oculta el prerecarga para que no interfiera con la interacción */
+}
+
+
+/* =========================
    INTRO
 ========================= */
 
@@ -188,4 +290,3 @@ h1 {
 .intro-social a:hover {
     color: #00bcd4; 
 }
-

@@ -50,3 +50,21 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+/* =========================
+   PRECARGA
+========================= */
+
+window.addEventListener("load", () => { // Espera a que la página se cargue completamente
+
+    const preloader = document.getElementById("prerecarga"); // Selecciona el elemento del preloader
+
+    setTimeout(() => { // Agrega una pequeña demora para mostrar el preloader
+
+        preloader.classList.add("ocultar"); // Agrega la clase "ocultar" para iniciar la animación de ocultar el preloader
+
+        preloader.addEventListener("transitionend", () => { // Escucha el evento de finalización de la transición
+            preloader.style.display = "none"; // Oculta completamente el preloader después de la animación
+        });
+    }, 1100); // Ajusta el tiempo de demora según la duración de tu animación de preloader
+});
