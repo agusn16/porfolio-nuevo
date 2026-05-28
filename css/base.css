@@ -195,7 +195,7 @@ h5 {
 h1 {
     font-size: 9rem; /* Tamaño del texto */
     font-weight: 700; /* Texto en negrita */
-    text-shadow: 0 0 30px rgba(0, 188, 212, 0.55); /* Sombra celeste */
+    text-shadow: 0 0 30px rgba(0, 188, 212, 0.30); /* Sombra celeste */
     margin-bottom: 1rem; /* Espacio inferior */
     line-height: 1.1; /* Espacio entre líneas */
 }

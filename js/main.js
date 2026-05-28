@@ -68,3 +68,49 @@ window.addEventListener("load", () => { // Espera a que la página se cargue com
         });
     }, 1100); // Ajusta el tiempo de demora según la duración de tu animación de preloader
 });
+
+/* =========================
+   SONIDO AL HACER CLICK
+========================= */
+
+const sonido = new Audio("sounds/minimalistaclick.mp3"); // Asegúrate de que la ruta al archivo de sonido sea correcta
+const boton = document.getElementById("boton-menu"); // Asegúrate de que el ID del botón sea correcto
+
+if(boton) {
+    
+    sonido.volume = 0.1; // Ajusta el volumen según tus preferencias (0.0 a 1.0)
+
+    boton.addEventListener("click", () => { // Agrega un evento de clic al botón
+
+        sonido.currentTime = 0; // Reinicia el sonido para que se reproduzca desde el principio cada vez que se haga clic
+        sonido.play(); // Reproduce el sonido al hacer clic en el botón
+    
+    });
+
+}
+
+const botonScroll = document.querySelector(".Desplazamiento"); // Asegúrate de que el selector coincida con el botón que deseas usar para el sonido al hacer scroll
+
+botonScroll.addEventListener("click", () => { 
+
+    sonido.currentTime = 0; // Reinicia el sonido para que se reproduzca desde el principio cada vez que se haga clic
+    sonido.play(); // Reproduce el sonido al hacer clic en el botón de desplazamiento
+ 
+});
+
+const botonSmoothScroll = document.querySelector(".button.stroke.smoothscroll"); // Asegúrate de que el selector coincida con el botón que deseas usar para el sonido al hacer scroll
+
+botonSmoothScroll.addEventListener("click", () => { 
+
+    sonido.currentTime = 0; // Reinicia el sonido para que se reproduzca desde el principio cada vez que se haga clic
+    sonido.play(); // Reproduce el sonido al hacer clic en el botón de desplazamiento
+ 
+});
+
+const buttonprimary = document.querySelector(".button.button-primary"); // Asegúrate de que el selector coincida con el botón que deseas usar para el sonido al hacer scroll
+
+buttonprimary.addEventListener("click", () => {
+    sonido.currentTime = 0; // Reinicia el sonido para que se reproduzca desde el principio cada vez que se haga clic
+    sonido.play(); // Reproduce el sonido al hacer clic en el botón de desplazamiento
+ 
+});

@@ -16,12 +16,21 @@
     }
 
     .top-barra {
+        position: fixed; /* Fija la barra en la parte superior */
+        left: 50%; /* Alinea a la izquierda */
+        transform: translateX(-50%); /* Centra la barra horizontalmente */
+
         width: 220px; /* Ancho del menú para pantallas pequeñas */
         height: 65px; /* Altura del menú para pantallas pequeñas */
+
+        padding: 0 20px; /* Reduce el padding para más espacio */
     }
 
     .navegacion {
         top: 65px; /* Ajusta la posición del menú para que esté justo debajo de la barra */
+        left: 50%; /* Centra el menú horizontalmente */
+        transform: translateX(-50%); /* Centra el menú horizontalmente */
+        width: 220px; /* Ancho del menú para pantallas pequeñas */
     }
 
     .logo-link {

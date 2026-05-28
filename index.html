@@ -5,8 +5,11 @@
   <!-- Meta tags para la configuración de la página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
-  <title>Mi Portafolio</title>
-  <link rel="icon" href="img/profile-pic.ico" type="image/png">
+  <meta name="description" content="Portfolio de Agustin Benitez - Frontend Developer">
+  <meta name="theme-color" content="#00bcd4">
+  
+  <title>Agustin Benitez | Frontend Developer</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
@@ -16,12 +19,12 @@
   <link rel="stylesheet" href="css/header.css">
 
   <!--icono de "A"-->
-  <link rel="icon" type="img/png" href="img/icon.png">
+  <link rel="icon" type="image/png" href="img/icon.png">
 
 </head>
 
 <body id="Top"> <!-- Agrega un ID para el enlace de "Volver al inicio" -->
-	
+
 <div id="prerecarga"> <!-- Contenedor del prerecarga -->
     <div class="linea-top"></div> <!-- Línea superior del prerecarga -->
     <div class="recarga-circular"></div> <!-- Carga circular del prerecarga -->
@@ -30,7 +33,7 @@
 <header class="encabezado"> <!-- Encabezado de la página --> 	
 
    		<div class="top-barra"> <!-- Barra superior -->
-   			<button class="menu-hamburguesa" href="#">
+   			<button id="boton-menu" class="menu-hamburguesa">
 				<div></div>
 				<div></div>
 				<div></div>
@@ -50,7 +53,8 @@
 					<li><a href="#contact">Contactos</a></li>
 				</ul>
 			</nav> <!-- /navegación -->
-   		</div> <!-- /top-bar(Barra superior) --> 
+   		</div> <!-- /top-bar(Barra superior) -->
+ 
 </header> <!-- /header(encabezado) -->
 
 <section id="intro"> <!-- Sección de introducción -->
@@ -63,7 +67,7 @@
    			<div class="caja-intro-1"> <!--dentro de Caja de introducción -->
 
 	   			<h5>Hola, Bienvenido.</h5>
-	   			<h1>I`m Agustin Benitez.</h1>
+	   			<h1>I'm Agustin Benitez.</h1>
 
 	   			<p class="posicion"> <!-- Posición laboral -->	
 	   				<span>Front-end Developer</span>
@@ -79,11 +83,21 @@
    	</div> <!-- /intro-content(introduccion de contenido) --> 
 
    	<ul class="intro-social">        
-         <li><a href="https://www.facebook.com/jonii.sombras"><i class="fa-brands fa-facebook"></i></a></li>
-         <li><a href="https://wa.me/5492613014524" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-         <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a></li>
-         <li><a href="https://github.com/agusn16"><i class="fa-brands fa-github"></i></a></li>
-         <li><a href="https://www.instagram.com/agusnb16"><i class="fa-brands fa-instagram"></i></a></li>
+         <li><a href="https://www.facebook.com/jonii.sombras"
+			target="_blank" 
+			rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
+         <li><a href="https://wa.me/5492613014524" 
+			target="_blank" 
+			rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a></li>
+         <li><a href="https://twitter.com/agusnb16"
+			target="_blank" 
+			rel="noopener noreferrer"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+         <li><a href="https://github.com/agusn16"
+			target="_blank" 
+			rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+         <li><a href="https://www.instagram.com/agusnb16"
+			target="_blank" 
+			rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
       </ul> <!-- /intro-social(intro de redes sociales) -->
 </section> <!-- /intro(introducción) -->
 
@@ -95,7 +109,7 @@
         <h1>Déjame presentarme.</h1>
 
         <div class="separador">
-			<img src="img\perfil.png" alt="Foto de perfil">
+			<img src="img/perfil.png" alt="Foto de perfil">
 			<p class="descripcion">
             Lorem ipsum Exercitation culpa qui dolor consequat exercitation 
 			fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure 
@@ -196,22 +210,23 @@
    		
 		<div class="col-twelve">
    			
-			<a href="#" title="Hire Me" class="button stroke smoothscroll">
+			<a href="#" class="button stroke smoothscroll">
 				Hire Me
 			</a>
    		
-			<a href="#" title="Download CV" class="button button-primary">
+			<a href="#" class="button button-primary">
 				Descargar CV
 			</a>
 		</div>   		
 	</div>
 </section> <!-- /acerca-de(about) -->
 
+
+
 <section id="portfolio"></section>
-
-
 <section id="services"></section>
 <section id="contact"></section>
+
 
 <script src="js/main.js"></script>  <!-- Enlace al archivo JavaScript para la funcionalidad del menú hamburguesa -->
 </body>
